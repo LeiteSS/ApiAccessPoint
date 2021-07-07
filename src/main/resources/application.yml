@@ -1,0 +1,34 @@
+server:
+  port: 8081
+
+#spring:
+#  datasource:
+#    url: jdbc:mysql://localhost:3306/point
+#    username: ssl
+#    password: 03568799We
+
+#  jpa:
+#    show-sql: true
+#    properties:
+#      hibernate:
+#        format_sql: true
+#    hibernate:
+#      ddl-auto: none
+
+spring:
+  datasource:
+    url: jdbc:h2:mem:point
+    username: sa
+    password:
+    diver-class-name: org.h2.Driver
+
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      dll-auto: update
+    show-sql: true
+
+  h2:
+    console:
+      enabled: true
+      path: /h2
